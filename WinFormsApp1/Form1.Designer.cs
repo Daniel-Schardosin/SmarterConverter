@@ -35,11 +35,25 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             Minimizar = new Guna.UI2.WinForms.Guna2Button();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2Panel1.SuspendLayout();
+            guna2Panel2.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Button1
@@ -51,10 +65,12 @@
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = Color.FromArgb(249, 98, 88);
+            guna2Button1.FocusedColor = Color.Transparent;
             guna2Button1.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(12, 12);
             guna2Button1.Name = "guna2Button1";
+            guna2Button1.PressedColor = Color.Transparent;
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(19, 19);
             guna2Button1.TabIndex = 0;
@@ -108,15 +124,76 @@
             Minimizar.Text = "Minimize";
             Minimizar.Click += guna2Button3_Click;
             // 
+            // guna2Panel1
+            // 
+            guna2Panel1.BackColor = Color.FromArgb(224, 224, 224);
+            guna2Panel1.Controls.Add(guna2Button4);
+            guna2Panel1.CustomizableEdges = customizableEdges9;
+            guna2Panel1.Dock = DockStyle.Left;
+            guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel1.Size = new Size(150, 574);
+            guna2Panel1.TabIndex = 4;
+            // 
+            // guna2Button4
+            // 
+            guna2Button4.BorderRadius = 5;
+            guna2Button4.CustomizableEdges = customizableEdges7;
+            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button4.FillColor = Color.Silver;
+            guna2Button4.Font = new Font("Yu Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2Button4.ForeColor = Color.White;
+            guna2Button4.Location = new Point(12, 78);
+            guna2Button4.Name = "guna2Button4";
+            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button4.Size = new Size(120, 45);
+            guna2Button4.TabIndex = 4;
+            guna2Button4.Text = "Home";
+            // 
+            // guna2Button3
+            // 
+            guna2Button3.BorderRadius = 8;
+            guna2Button3.CustomizableEdges = customizableEdges11;
+            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button3.Font = new Font("Yu Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2Button3.ForeColor = Color.White;
+            guna2Button3.Location = new Point(372, 500);
+            guna2Button3.Name = "guna2Button3";
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Button3.Size = new Size(345, 45);
+            guna2Button3.TabIndex = 3;
+            guna2Button3.Text = "Teste de Botão com a nova fonte";
+            // 
+            // guna2Panel2
+            // 
+            guna2Panel2.BackColor = Color.White;
+            guna2Panel2.Controls.Add(guna2Button3);
+            guna2Panel2.CustomizableEdges = customizableEdges13;
+            guna2Panel2.Dock = DockStyle.Fill;
+            guna2Panel2.Location = new Point(0, 0);
+            guna2Panel2.Name = "guna2Panel2";
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2Panel2.Size = new Size(939, 574);
+            guna2Panel2.TabIndex = 5;
+            // 
             // SmartConverter
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(247, 247, 246);
+            BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(939, 574);
             Controls.Add(Minimizar);
-            Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
+            Controls.Add(guna2Button2);
+            Controls.Add(guna2Panel1);
+            Controls.Add(guna2Panel2);
             Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Name = "SmartConverter";
@@ -124,6 +201,8 @@
             Text = "Form1";
             Load += SmartConverter_Load;
             Click += SmartConverter_Click;
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -134,5 +213,9 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Button Minimizar;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }
