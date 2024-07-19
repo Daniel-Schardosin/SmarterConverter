@@ -65,6 +65,7 @@
             // 
             guna2BorderlessForm1.BorderRadius = 20;
             guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorColor = Color.Transparent;
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             guna2BorderlessForm1.ShadowColor = SystemColors.GradientActiveCaption;
             guna2BorderlessForm1.TransparentWhileDrag = true;
@@ -111,7 +112,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
+            BackColor = Color.FromArgb(247, 247, 246);
             ClientSize = new Size(939, 574);
             Controls.Add(Minimizar);
             Controls.Add(guna2Button2);
