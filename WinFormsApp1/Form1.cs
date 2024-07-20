@@ -15,12 +15,13 @@ namespace WinFormsApp1
             InitializeComponent();
             LoadCustomFont();
             ApplyFontToControls(this);
+            this.Opacity = 0.8;
         }
 
         private void LoadCustomFont()
         {
             _fontCollection = new PrivateFontCollection();
-            string fontPath = Path.Combine(Application.StartupPath, "Fonts", "SFPRODISPLAYREGULAR.OTF");
+            string fontPath = Path.Combine(Application.StartupPath, "Fonts", "SF-Pro-Display-Semibold");
             _fontCollection.AddFontFile(fontPath);
 
             // Define a fonte padrão para o formulário
@@ -74,7 +75,12 @@ namespace WinFormsApp1
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void guna2Button3_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
