@@ -1,13 +1,19 @@
 using Guna.UI2.WinForms;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using WinFormsApp1.UserC;
 
 namespace WinFormsApp1
 {
+
     public partial class SmartConverter : Form
     {
+
+
         private PrivateFontCollection _fontCollection;
 
         public SmartConverter()
@@ -15,31 +21,43 @@ namespace WinFormsApp1
             InitializeComponent();
             LoadCustomFont();
             ApplyFontToControls(this);
-            this.Opacity = 0.8;
+            Home uc = new Home();
+            addUserControl(uc);
         }
 
         private void LoadCustomFont()
         {
             _fontCollection = new PrivateFontCollection();
-            string fontPath = Path.Combine(Application.StartupPath, "Fonts", "SF-Pro-Display-Semibold");
+            string fontPath = Path.Combine(Application.StartupPath, "Fonts", "SF-Pro-Display-Semibold.otf");
             _fontCollection.AddFontFile(fontPath);
 
             // Define a fonte padrão para o formulário
-            this.Font = new Font(_fontCollection.Families[0], 10);
+            this.Font = new Font(_fontCollection.Families[0], 15);
         }
 
         private void ApplyFontToControls(Control parent)
         {
             foreach (Control control in parent.Controls)
             {
-                control.Font = new Font(_fontCollection.Families[0], 10);
+                control.Font = new Font(_fontCollection.Families[0], 11);
                 // Recursivamente aplique a todos os controles filhos
                 if (control.Controls.Count > 0)
                 {
                     ApplyFontToControls(control);
                 }
             }
+
         }
+        private void addUserControl(UserControl userControl)
+        {
+            PainelContainer.Controls.Clear();
+            PainelContainer.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
+
+
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -80,7 +98,35 @@ namespace WinFormsApp1
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
+            Home uc = new Home();
+            addUserControl(uc);
+        }
 
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            Conversor uc = new Conversor();
+            addUserControl(uc);
+        }
+
+        private void dashboard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Perfil  uc = new Perfil();
+            addUserControl(uc);
         }
     }
 }
