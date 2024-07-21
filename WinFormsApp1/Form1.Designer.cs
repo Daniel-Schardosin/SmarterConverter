@@ -248,6 +248,7 @@
             // PainelContainer
             // 
             PainelContainer.BackColor = Color.White;
+            PainelContainer.BorderRadius = 10;
             PainelContainer.CustomizableEdges = customizableEdges3;
             PainelContainer.Location = new Point(188, 46);
             PainelContainer.Name = "PainelContainer";
