@@ -44,7 +44,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(416, 118);
+            label2.Location = new Point(287, 117);
             label2.Name = "label2";
             label2.Size = new Size(104, 15);
             label2.TabIndex = 3;
@@ -53,16 +53,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(258, 15);
+            label1.Location = new Point(207, 14);
             label1.Name = "label1";
             label1.Size = new Size(211, 15);
             label1.TabIndex = 2;
             label1.Text = "Bem vindo ao novo Smarter Conversor";
+            label1.Click += label1_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(416, 166);
+            label3.Location = new Point(287, 165);
             label3.Name = "label3";
             label3.Size = new Size(104, 15);
             label3.TabIndex = 4;
@@ -71,7 +72,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(416, 294);
+            label4.Location = new Point(287, 293);
             label4.Name = "label4";
             label4.Size = new Size(104, 15);
             label4.TabIndex = 7;
@@ -80,7 +81,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(416, 246);
+            label5.Location = new Point(287, 245);
             label5.Name = "label5";
             label5.Size = new Size(104, 15);
             label5.TabIndex = 6;
@@ -89,7 +90,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(416, 199);
+            label6.Location = new Point(287, 198);
             label6.Name = "label6";
             label6.Size = new Size(211, 15);
             label6.TabIndex = 5;
@@ -100,10 +101,10 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges1;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(3, 33);
+            guna2PictureBox1.Location = new Point(32, 166);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox1.Size = new Size(352, 386);
+            guna2PictureBox1.Size = new Size(195, 143);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 8;
             guna2PictureBox1.TabStop = false;
@@ -112,6 +113,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(238, 234, 224);
             Controls.Add(guna2PictureBox1);
             Controls.Add(label4);

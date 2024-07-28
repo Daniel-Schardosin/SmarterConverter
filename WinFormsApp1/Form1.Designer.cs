@@ -62,10 +62,7 @@
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             PainelContainer = new Guna.UI2.WinForms.Guna2Panel();
             guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            label1 = new Label();
-            label2 = new Label();
             guna2Panel1.SuspendLayout();
-            PainelContainer.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Button1
@@ -240,8 +237,6 @@
             // 
             PainelContainer.BackColor = Color.FromArgb(238, 234, 224);
             PainelContainer.BorderRadius = 10;
-            PainelContainer.Controls.Add(label2);
-            PainelContainer.Controls.Add(label1);
             PainelContainer.CustomizableEdges = customizableEdges5;
             PainelContainer.Location = new Point(188, 46);
             PainelContainer.MaximumSize = new Size(748, 525);
@@ -273,24 +268,6 @@
             guna2Button7.TextAlign = HorizontalAlignment.Left;
             guna2Button7.Click += guna2Button7_Click_1;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(235, 49);
-            label1.Name = "label1";
-            label1.Size = new Size(252, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Bem vindo ao novo Smarter Conversor";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(235, 89);
-            label2.Name = "label2";
-            label2.Size = new Size(140, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Simples e intuitivo";
-            // 
             // SmartConverter
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -312,8 +289,6 @@
             Load += SmartConverter_Load;
             Click += SmartConverter_Click;
             guna2Panel1.ResumeLayout(false);
-            PainelContainer.ResumeLayout(false);
-            PainelContainer.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -332,7 +307,5 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Label label2;
-        private Label label1;
     }
 }
