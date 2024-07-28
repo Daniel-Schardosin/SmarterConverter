@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinFormsApp1.UserC
+namespace SmartConvert.UserC
 {
-    public partial class Home : UserControl
+    public partial class Config : UserControl
     {
-        public Home()
+        public Config()
         {
             InitializeComponent();
-        }
-
-        private void Home_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,5 +1,6 @@
 using Guna.UI2.WinForms;
 using Microsoft.VisualBasic.ApplicationServices;
+using SmartConvert.UserC;
 using System;
 using System.Drawing;
 using System.Drawing.Text;
@@ -28,7 +29,7 @@ namespace WinFormsApp1
         private void LoadCustomFont()
         {
             _fontCollection = new PrivateFontCollection();
-            string fontPath = Path.Combine(Application.StartupPath, "Fonts", "SF-Pro-Display-Semibold.otf");
+            string fontPath = Path.Combine(Application.StartupPath, "Fonts/Pixel", "PixelifySans-Medium.ttf");
             _fontCollection.AddFontFile(fontPath);
 
             // Define a fonte padrão para o formulário
@@ -54,9 +55,6 @@ namespace WinFormsApp1
             PainelContainer.Controls.Add(userControl);
             userControl.BringToFront();
         }
-
-
-
 
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -112,12 +110,6 @@ namespace WinFormsApp1
 
         }
 
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-            Conversor uc = new Conversor();
-            addUserControl(uc);
-        }
-
         private void dashboard1_Load(object sender, EventArgs e)
         {
 
@@ -125,7 +117,42 @@ namespace WinFormsApp1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Perfil  uc = new Perfil();
+            Perfil uc = new Perfil();
+            addUserControl(uc);
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            Config uc = new Config();
+            addUserControl(uc);
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            Home uc = new Home();
+            addUserControl(uc);
+        }
+
+        private void guna2Button3_Click_2(object sender, EventArgs e)
+        {
+            Conversor uc = new Conversor();
+            addUserControl(uc);
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            Config uc = new Config();
+            addUserControl(uc);
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button7_Click_1(object sender, EventArgs e)
+        {
+            Perfil uc = new Perfil();
             addUserControl(uc);
         }
     }

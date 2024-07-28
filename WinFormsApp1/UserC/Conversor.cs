@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartConvert.UserC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,21 @@ namespace WinFormsApp1.UserC
         public Conversor()
         {
             InitializeComponent();
+            
+
+        }
+        private void usercontrol2(UserControl userControl)
+        {
+            guna2Panel1.Controls.Clear();
+            guna2Panel1.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+        
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Conversorpdf uc = new Conversorpdf();
+            usercontrol2(uc);
         }
     }
 }
