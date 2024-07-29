@@ -18,12 +18,15 @@ namespace SmartConvert.UserC
     public partial class Conversorpdf : UserControl
     {
 
+        String DiretorioEscolhido;
+
 
         public Conversorpdf()
         {
             InitializeComponent();
             LoadCustomFont();
             ApplyFontToControls2(this);
+            this.guna2Button2.Visible = false;
         }
 
 
@@ -87,10 +90,11 @@ namespace SmartConvert.UserC
 
                 DialogResult Result = DiretorioArquivos.ShowDialog();
 
-                if (Result == DialogResult.OK) 
+                if (Result == DialogResult.OK && !string.IsNullOrEmpty(DiretorioArquivos.SelectedPath)) 
                 {
-                    String DiretorioEscolhido = DiretorioArquivos.SelectedPath;
+                    DiretorioEscolhido = DiretorioArquivos.SelectedPath;
                     guna2TextBox1.Text = DiretorioEscolhido;
+                    this.guna2Button2.Visible = true;
                 }
             }
 

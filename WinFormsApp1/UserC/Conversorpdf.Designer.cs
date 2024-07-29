@@ -32,6 +32,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -40,15 +42,16 @@
             guna2vSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             listBox1 = new ListBox();
             label1 = new Label();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Button1
             // 
-            guna2Button1.BorderColor = Color.FromArgb(128, 64, 0);
+            guna2Button1.BorderColor = Color.SandyBrown;
             guna2Button1.BorderRadius = 8;
-            guna2Button1.BorderThickness = 4;
-            guna2Button1.CustomBorderColor = Color.FromArgb(128, 64, 0);
+            guna2Button1.BorderThickness = 2;
+            guna2Button1.CustomBorderColor = Color.SandyBrown;
             guna2Button1.CustomBorderThickness = new Padding(3);
             guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
@@ -95,17 +98,18 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.FromArgb(238, 234, 224);
+            guna2Panel1.Controls.Add(guna2Button2);
             guna2Panel1.Controls.Add(guna2vSeparator1);
             guna2Panel1.Controls.Add(listBox1);
             guna2Panel1.Controls.Add(label1);
             guna2Panel1.Controls.Add(guna2TextBox1);
             guna2Panel1.Controls.Add(guna2Button1);
-            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Dock = DockStyle.Bottom;
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Margin = new Padding(4);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(748, 525);
             guna2Panel1.TabIndex = 2;
             guna2Panel1.Paint += guna2Panel1_Paint;
@@ -140,6 +144,23 @@
             label1.TabIndex = 2;
             label1.Text = "Pasta";
             // 
+            // guna2Button2
+            // 
+            guna2Button2.CustomizableEdges = customizableEdges5;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.FromArgb(0, 192, 0);
+            guna2Button2.Font = new Font("Segoe UI", 9F);
+            guna2Button2.ForeColor = Color.White;
+            guna2Button2.Location = new Point(197, 429);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Button2.Size = new Size(329, 45);
+            guna2Button2.TabIndex = 5;
+            guna2Button2.Text = "Converter";
+            // 
             // Conversorpdf
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -162,5 +183,6 @@
         private Label label1;
         private ListBox listBox1;
         private Guna.UI2.WinForms.Guna2VSeparator guna2vSeparator1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
