@@ -29,85 +29,34 @@
         private void InitializeComponent()
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            label2 = new Label();
             label1 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             SuspendLayout();
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(287, 117);
-            label2.Name = "label2";
-            label2.Size = new Size(104, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Simples e intuitivo";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(207, 14);
+            label1.Location = new Point(218, 11);
             label1.Name = "label1";
             label1.Size = new Size(211, 15);
             label1.TabIndex = 2;
             label1.Text = "Bem vindo ao novo Smarter Conversor";
             label1.Click += label1_Click;
             // 
-            // label3
+            // guna2Panel1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(287, 165);
-            label3.Name = "label3";
-            label3.Size = new Size(104, 15);
-            label3.TabIndex = 4;
-            label3.Text = "Simples e intuitivo";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(287, 293);
-            label4.Name = "label4";
-            label4.Size = new Size(104, 15);
-            label4.TabIndex = 7;
-            label4.Text = "Simples e intuitivo";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(287, 245);
-            label5.Name = "label5";
-            label5.Size = new Size(104, 15);
-            label5.TabIndex = 6;
-            label5.Text = "Simples e intuitivo";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(287, 198);
-            label6.Name = "label6";
-            label6.Size = new Size(211, 15);
-            label6.TabIndex = 5;
-            label6.Text = "Bem vindo ao novo Smarter Conversor";
-            // 
-            // guna2PictureBox1
-            // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges1;
-            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(32, 166);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox1.Size = new Size(195, 143);
-            guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            guna2PictureBox1.TabIndex = 8;
-            guna2PictureBox1.TabStop = false;
+            guna2Panel1.BackColor = Color.Transparent;
+            guna2Panel1.BorderColor = Color.FromArgb(255, 192, 128);
+            guna2Panel1.BorderRadius = 10;
+            guna2Panel1.BorderThickness = 2;
+            guna2Panel1.CustomBorderColor = Color.FromArgb(255, 128, 0);
+            guna2Panel1.CustomizableEdges = customizableEdges1;
+            guna2Panel1.Location = new Point(48, 43);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel1.Size = new Size(200, 402);
+            guna2Panel1.TabIndex = 3;
             // 
             // Home
             // 
@@ -115,29 +64,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(238, 234, 224);
-            Controls.Add(guna2PictureBox1);
-            Controls.Add(label4);
-            Controls.Add(label5);
-            Controls.Add(label6);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(guna2Panel1);
             Controls.Add(label1);
             Name = "Home";
             Size = new Size(748, 525);
             Load += Home_Load;
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label2;
         private Label label1;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

@@ -29,7 +29,7 @@ namespace WinFormsApp1
         private void LoadCustomFont()
         {
             _fontCollection = new PrivateFontCollection();
-            string fontPath = Path.Combine(Application.StartupPath, "Fonts/Pixel", "PixelifySans-Medium.ttf");
+            string fontPath = Path.Combine(Application.StartupPath, "Fonts/SF-Pro", "SF-Pro-Display-Light.otf");
             _fontCollection.AddFontFile(fontPath);
 
             // Define a fonte padrão para o formulário
