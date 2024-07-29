@@ -47,7 +47,7 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.Transparent;
-            guna2Panel1.BorderColor = Color.FromArgb(255, 192, 128);
+            guna2Panel1.BorderColor = Color.FromArgb(128, 64, 0);
             guna2Panel1.BorderRadius = 10;
             guna2Panel1.BorderThickness = 2;
             guna2Panel1.CustomBorderColor = Color.FromArgb(255, 128, 0);
