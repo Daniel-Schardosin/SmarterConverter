@@ -45,8 +45,10 @@
             // 
             // guna2Button1
             // 
-            guna2Button1.BorderRadius = 3;
-            guna2Button1.CustomBorderColor = Color.FromArgb(24, 24, 23);
+            guna2Button1.BorderColor = Color.FromArgb(128, 64, 0);
+            guna2Button1.BorderRadius = 8;
+            guna2Button1.BorderThickness = 4;
+            guna2Button1.CustomBorderColor = Color.FromArgb(128, 64, 0);
             guna2Button1.CustomBorderThickness = new Padding(3);
             guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
@@ -62,6 +64,7 @@
             guna2Button1.Size = new Size(207, 38);
             guna2Button1.TabIndex = 0;
             guna2Button1.Text = "Localizar Arquivos";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2TextBox1
             // 
@@ -74,12 +77,16 @@
             guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9F);
+            guna2TextBox1.ForeColor = Color.FromArgb(64, 64, 64);
+            guna2TextBox1.HideSelection = false;
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.ImeMode = ImeMode.Off;
             guna2TextBox1.Location = new Point(27, 37);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderForeColor = Color.Black;
             guna2TextBox1.PlaceholderText = "C:\\";
+            guna2TextBox1.ReadOnly = true;
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TextBox1.Size = new Size(693, 29);

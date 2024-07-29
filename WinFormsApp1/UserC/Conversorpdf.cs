@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using WinFormsApp1;
+using System.Diagnostics;
 
 namespace SmartConvert.UserC
 {
@@ -68,6 +70,29 @@ namespace SmartConvert.UserC
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            SelecDirectory();
+
+        }
+        private void SelecDirectory()
+        {
+            using (FolderBrowserDialog DiretorioArquivos = new FolderBrowserDialog()) 
+            {
+                DiretorioArquivos.Description =  "Selecione um diretório";
+                DiretorioArquivos.ShowNewFolderButton = true;
+
+                DialogResult Result = DiretorioArquivos.ShowDialog();
+
+                if (Result == DialogResult.OK) 
+                {
+                    String DiretorioEscolhido = DiretorioArquivos.SelectedPath;
+                    guna2TextBox1.Text = DiretorioEscolhido;
+                }
+            }
 
         }
     }
