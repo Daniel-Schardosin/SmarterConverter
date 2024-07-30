@@ -48,10 +48,10 @@
             // 
             // guna2Button1
             // 
-            guna2Button1.BorderColor = Color.FromArgb(15, 100, 102);
+            guna2Button1.BorderColor = Color.FromArgb(102, 83, 52);
             guna2Button1.BorderRadius = 8;
             guna2Button1.BorderThickness = 2;
-            guna2Button1.CustomBorderColor = Color.FromArgb(15, 100, 102);
+            guna2Button1.CustomBorderColor = Color.FromArgb(102, 83, 52);
             guna2Button1.CustomBorderThickness = new Padding(3);
             guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
@@ -60,7 +60,7 @@
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = Color.Transparent;
             guna2Button1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.FromArgb(15, 100, 102);
+            guna2Button1.ForeColor = Color.FromArgb(102, 83, 52);
             guna2Button1.Location = new Point(27, 205);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
