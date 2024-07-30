@@ -19,6 +19,7 @@ namespace SmartConvert.UserC
     {
 
         String DiretorioEscolhido;
+        String[] ArquivosPDF;
 
 
         public Conversorpdf()
@@ -83,20 +84,34 @@ namespace SmartConvert.UserC
         }
         private void SelecDirectory()
         {
-            using (FolderBrowserDialog DiretorioArquivos = new FolderBrowserDialog()) 
+            using (FolderBrowserDialog DiretorioArquivos = new FolderBrowserDialog())
             {
-                DiretorioArquivos.Description =  "Selecione um diretório";
+                DiretorioArquivos.Description = "Selecione um diretório";
                 DiretorioArquivos.ShowNewFolderButton = true;
 
                 DialogResult Result = DiretorioArquivos.ShowDialog();
 
-                if (Result == DialogResult.OK && !string.IsNullOrEmpty(DiretorioArquivos.SelectedPath)) 
+                if (Result == DialogResult.OK && !string.IsNullOrEmpty(DiretorioArquivos.SelectedPath))
                 {
                     DiretorioEscolhido = DiretorioArquivos.SelectedPath;
                     guna2TextBox1.Text = DiretorioEscolhido;
                     this.guna2Button2.Visible = true;
+                    ArquivosPDF = Directory.GetFiles(DiretorioEscolhido, "*.pdf");
+
+
+                    listBox1.Items.Clear();
+
+                    foreach (string File in ArquivosPDF)
+                    {
+                        listBox1.Items.Add(Path.GetFileName(File));   
+                    }
                 }
             }
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -39,19 +39,19 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2vSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             listBox1 = new ListBox();
             label1 = new Label();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Button1
             // 
-            guna2Button1.BorderColor = Color.SandyBrown;
+            guna2Button1.BorderColor = Color.FromArgb(15, 100, 102);
             guna2Button1.BorderRadius = 8;
             guna2Button1.BorderThickness = 2;
-            guna2Button1.CustomBorderColor = Color.SandyBrown;
+            guna2Button1.CustomBorderColor = Color.FromArgb(15, 100, 102);
             guna2Button1.CustomBorderThickness = new Padding(3);
             guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
@@ -60,7 +60,7 @@
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = Color.Transparent;
             guna2Button1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.FromArgb(24, 24, 23);
+            guna2Button1.ForeColor = Color.FromArgb(15, 100, 102);
             guna2Button1.Location = new Point(27, 205);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -114,36 +114,6 @@
             guna2Panel1.TabIndex = 2;
             guna2Panel1.Paint += guna2Panel1_Paint;
             // 
-            // guna2vSeparator1
-            // 
-            guna2vSeparator1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            guna2vSeparator1.Location = new Point(0, 0);
-            guna2vSeparator1.Name = "guna2vSeparator1";
-            guna2vSeparator1.Size = new Size(10, 525);
-            guna2vSeparator1.TabIndex = 4;
-            // 
-            // listBox1
-            // 
-            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listBox1.BorderStyle = BorderStyle.None;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Items.AddRange(new object[] { "Teste de arquivo", "testes de arquivo 2 ", "Teste de arquivos 3", "Teste de arquivo", "testes de arquivo 2 ", "Teste de arquivos 3", "", "Teste de arquivo", "testes de arquivo 2 ", "Teste de arquivos 3", "", "Teste de arquivo", "testes de arquivo 2 ", "Teste de arquivos 3", "", "Teste de arquivo", "testes de arquivo 2 ", "Teste de arquivos 3", "", "Teste de arquivo", "testes de arquivo 2 ", "Teste de arquivos 3", "", "Teste de arquivo", "testes de arquivo 2 ", "Teste de arquivos 3", "Teste de arquivo", "testes de arquivo 2 ", "Teste de arquivos 3", "", "s" });
-            listBox1.Location = new Point(27, 89);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(693, 90);
-            listBox1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.FromArgb(24, 24, 23);
-            label1.Location = new Point(27, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(35, 15);
-            label1.TabIndex = 2;
-            label1.Text = "Pasta";
-            // 
             // guna2Button2
             // 
             guna2Button2.CustomizableEdges = customizableEdges5;
@@ -160,6 +130,36 @@
             guna2Button2.Size = new Size(329, 45);
             guna2Button2.TabIndex = 5;
             guna2Button2.Text = "Converter";
+            guna2Button2.Click += guna2Button2_Click;
+            // 
+            // guna2vSeparator1
+            // 
+            guna2vSeparator1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            guna2vSeparator1.Location = new Point(0, 0);
+            guna2vSeparator1.Name = "guna2vSeparator1";
+            guna2vSeparator1.Size = new Size(10, 525);
+            guna2vSeparator1.TabIndex = 4;
+            // 
+            // listBox1
+            // 
+            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listBox1.BorderStyle = BorderStyle.None;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(27, 89);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(693, 90);
+            listBox1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.FromArgb(24, 24, 23);
+            label1.Location = new Point(27, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(35, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Pasta";
             // 
             // Conversorpdf
             // 

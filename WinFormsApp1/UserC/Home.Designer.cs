@@ -39,9 +39,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(218, 11);
             label1.Name = "label1";
-            label1.Size = new Size(211, 15);
+            label1.Size = new Size(209, 15);
             label1.TabIndex = 2;
-            label1.Text = "Bem vindo ao novo Smarter Conversor";
+            label1.Text = "Bem vindo ao novo Smarter Converter";
             label1.Click += label1_Click;
             // 
             // guna2Panel1
