@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using WinFormsApp1;
 using System.Diagnostics;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.parser;
 
 namespace SmartConvert.UserC
 {
@@ -34,7 +36,7 @@ namespace SmartConvert.UserC
         private void LoadCustomFont()
         {
             _fontCollection = new PrivateFontCollection();
-            string fontPath = Path.Combine(Application.StartupPath, "Fonts/Pixel", "PixelifySans-Medium.ttf");
+            string fontPath = System.IO.Path.Combine(Application.StartupPath, "Fonts/Pixel", "PixelifySans-Medium.ttf");
             _fontCollection.AddFontFile(fontPath);
 
             // Define a fonte padrão para o formulário
@@ -103,7 +105,7 @@ namespace SmartConvert.UserC
 
                     foreach (string File in ArquivosPDF)
                     {
-                        listBox1.Items.Add(Path.GetFileName(File));   
+                        listBox1.Items.Add(System.IO.Path.GetFileName(File));
                     }
                 }
             }
@@ -111,7 +113,48 @@ namespace SmartConvert.UserC
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
+
         {
+            foreach( String pdfpath in ArquivosPDF)
+            {
+
+                try
+                {
+                    String text = ExtrairTextoPDF(pdfpath);
+                    string txtPath = System.IO.Path.ChangeExtension(DiretorioEscolhido, ".txt");
+                    File.WriteAllText(txtPath, text);
+                }
+                catch (Exception ex) {
+                    MessageBox.Show("$Erro ao converter o arquivo {Path.GetFileName(pdfpath)}:{ex.Message}");
+                }
+
+                MessageBox.Show("Conversão concluída!");
+
+            }
+
+        }
+        private string ExtrairTextoPDF(string path)
+        {
+            try
+            {
+                using (PdfReader reader = new PdfReader(path))
+                {
+                    StringWriter output = new StringWriter();
+                    for (int i = 1; i <= reader.NumberOfPages; i++)
+                    {
+                        output.WriteLine(PdfTextExtractor.GetTextFromPage(reader, i));
+                    }
+                    return output.ToString();
+                }
+            }
+            catch (iTextSharp.text.exceptions.InvalidPdfException ex)
+            {
+                throw new Exception("O arquivo não é um PDF válido ou está corrompido.", ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao ler o arquivo PDF.", ex);
+            }
 
         }
     }
