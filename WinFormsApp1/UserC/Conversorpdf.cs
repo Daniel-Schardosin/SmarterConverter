@@ -22,7 +22,7 @@ namespace SmartConvert.UserC
 
         String DiretorioEscolhido;
         String[] ArquivosPDF;
-
+        Boolean Erro = false;
 
         public Conversorpdf()
         {
@@ -121,14 +121,21 @@ namespace SmartConvert.UserC
                 try
                 {
                     String text = ExtrairTextoPDF(pdfpath);
-                    string txtPath = System.IO.Path.ChangeExtension(DiretorioEscolhido, ".txt");
+                    string txtPath = System.IO.Path.ChangeExtension(DiretorioEscolhido +"/Saida", ".txt");
                     File.WriteAllText(txtPath, text);
                 }
                 catch (Exception ex) {
-                    MessageBox.Show("$Erro ao converter o arquivo {Path.GetFileName(pdfpath)}:{ex.Message}");
+                    MessageBox.Show($"Erro ao converter o arquivo {System.IO.Path.GetFileName(pdfpath)}:{ex.Message}");
+                     Erro = true;
                 }
+                if  (Erro == false)
+                {
+                    MessageBox.Show("Conversão concluída!");
+                    Process.Start("explorer.exe", DiretorioEscolhido);
 
-                MessageBox.Show("Conversão concluída!");
+
+                }
+                
 
             }
 
