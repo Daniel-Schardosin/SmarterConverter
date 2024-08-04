@@ -121,8 +121,28 @@ namespace SmartConvert.UserC
                 try
                 {
                     String text = ExtrairTextoPDF(pdfpath);
-                    string txtPath = System.IO.Path.ChangeExtension(DiretorioEscolhido +"/Saida", ".txt");
-                    File.WriteAllText(txtPath, text);
+
+
+                    String PastadeSaida = System.IO.Path.Combine(DiretorioEscolhido,"Saída");
+
+                    if (Directory.Exists(PastadeSaida)) {
+                        String NomeArquivo = System.IO.Path.GetFileNameWithoutExtension(pdfpath) + ".txt" ;
+                        NomeArquivo = NomeArquivo.ToLower();   
+                        String GravaSaida = System.IO.Path.Combine(PastadeSaida, NomeArquivo);
+                        File.WriteAllText(GravaSaida, text);
+                        
+
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(PastadeSaida);
+                        String NomeArquivo = System.IO.Path.GetFileNameWithoutExtension(pdfpath) + ".txt";
+                        NomeArquivo = NomeArquivo.ToLower();
+                        String GravaSaida = System.IO.Path.Combine(PastadeSaida, NomeArquivo);
+                        File.WriteAllText(GravaSaida, text);
+                    }
+
+                    
                 }
                 catch (Exception ex) {
                     MessageBox.Show($"Erro ao converter o arquivo {System.IO.Path.GetFileName(pdfpath)}:{ex.Message}");
@@ -132,7 +152,6 @@ namespace SmartConvert.UserC
                 {
                     MessageBox.Show("Conversão concluída!");
                     Process.Start("explorer.exe", DiretorioEscolhido);
-
 
                 }
                 
