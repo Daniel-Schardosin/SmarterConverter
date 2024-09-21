@@ -155,5 +155,10 @@ namespace WinFormsApp1
             Perfil uc = new Perfil();
             addUserControl(uc);
         }
+
+        private void PainelContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

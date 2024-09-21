@@ -73,7 +73,7 @@
             // 
             // guna2Panel1
             // 
-            guna2Panel1.BackColor = Color.FromArgb(238, 234, 224);
+            guna2Panel1.BackColor = Color.FromArgb(237, 229, 218);
             guna2Panel1.BorderColor = Color.FromArgb(241, 238, 244);
             guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
             guna2Panel1.Controls.Add(guna2Button7);
@@ -81,10 +81,11 @@
             guna2Panel1.Controls.Add(guna2Button3);
             guna2Panel1.Controls.Add(guna2Button4);
             guna2Panel1.CustomizableEdges = customizableEdges15;
-            guna2Panel1.Location = new Point(0, 46);
+            guna2Panel1.Dock = DockStyle.Left;
+            guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel1.Size = new Size(188, 528);
+            guna2Panel1.Size = new Size(188, 574);
             guna2Panel1.TabIndex = 4;
             guna2Panel1.Paint += guna2Panel1_Paint;
             // 
@@ -123,7 +124,7 @@
             guna2Button5.ForeColor = Color.FromArgb(44, 53, 50);
             guna2Button5.Image = (Image)resources.GetObject("guna2Button5.Image");
             guna2Button5.ImageAlign = HorizontalAlignment.Left;
-            guna2Button5.Location = new Point(0, 484);
+            guna2Button5.Location = new Point(0, 530);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Button5.Size = new Size(188, 44);
@@ -192,7 +193,7 @@
             // 
             // PainelContainer
             // 
-            PainelContainer.BackColor = Color.FromArgb(238, 234, 224);
+            PainelContainer.BackColor = Color.FromArgb(237, 229, 218);
             PainelContainer.BorderRadius = 5;
             PainelContainer.CustomizableEdges = customizableEdges5;
             PainelContainer.Location = new Point(188, 46);
@@ -202,39 +203,40 @@
             PainelContainer.ShadowDecoration.CustomizableEdges = customizableEdges6;
             PainelContainer.Size = new Size(748, 525);
             PainelContainer.TabIndex = 7;
+            PainelContainer.Paint += PainelContainer_Paint;
             // 
             // guna2ControlBox1
             // 
             guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox1.BorderRadius = 5;
+            guna2ControlBox1.BorderRadius = 3;
             guna2ControlBox1.CustomizableEdges = customizableEdges3;
-            guna2ControlBox1.FillColor = Color.Coral;
+            guna2ControlBox1.FillColor = Color.Firebrick;
             guna2ControlBox1.IconColor = Color.White;
-            guna2ControlBox1.Location = new Point(882, 12);
+            guna2ControlBox1.Location = new Point(895, 12);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ControlBox1.Size = new Size(45, 25);
+            guna2ControlBox1.Size = new Size(32, 25);
             guna2ControlBox1.TabIndex = 0;
             // 
             // guna2ControlBox2
             // 
             guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox2.BorderRadius = 5;
+            guna2ControlBox2.BorderRadius = 3;
             guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             guna2ControlBox2.CustomizableEdges = customizableEdges1;
             guna2ControlBox2.FillColor = Color.FromArgb(15, 100, 102);
             guna2ControlBox2.IconColor = Color.White;
-            guna2ControlBox2.Location = new Point(839, 12);
+            guna2ControlBox2.Location = new Point(858, 12);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ControlBox2.Size = new Size(37, 25);
+            guna2ControlBox2.Size = new Size(31, 25);
             guna2ControlBox2.TabIndex = 8;
             // 
             // SmartConverter
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(210, 232, 227);
+            BackColor = Color.PapayaWhip;
             ClientSize = new Size(939, 574);
             Controls.Add(guna2ControlBox2);
             Controls.Add(guna2ControlBox1);

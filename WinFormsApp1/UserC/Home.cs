@@ -22,6 +22,7 @@ namespace WinFormsApp1.UserC
         }
 
 
+
         private void LoadCustomFont()
         {
             _fontCollection = new PrivateFontCollection();

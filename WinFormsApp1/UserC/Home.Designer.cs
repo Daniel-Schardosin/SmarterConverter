@@ -39,20 +39,20 @@
             label1.AutoSize = true;
             label1.Location = new Point(218, 11);
             label1.Name = "label1";
-            label1.Size = new Size(209, 15);
+            label1.Size = new Size(179, 15);
             label1.TabIndex = 2;
-            label1.Text = "Bem vindo ao novo Smarter Converter";
+            label1.Text = "Bem vindo ao Smarter Converter";
             label1.Click += label1_Click;
             // 
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.Transparent;
             guna2Panel1.BorderColor = Color.FromArgb(128, 64, 0);
-            guna2Panel1.BorderRadius = 10;
+            guna2Panel1.BorderRadius = 3;
             guna2Panel1.BorderThickness = 2;
             guna2Panel1.CustomBorderColor = Color.FromArgb(255, 128, 0);
             guna2Panel1.CustomizableEdges = customizableEdges1;
-            guna2Panel1.Location = new Point(48, 43);
+            guna2Panel1.Location = new Point(46, 51);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(200, 402);
@@ -63,7 +63,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            BackColor = Color.FromArgb(238, 234, 224);
+            BackColor = Color.FromArgb(252, 248, 245);
             Controls.Add(guna2Panel1);
             Controls.Add(label1);
             Name = "Home";
