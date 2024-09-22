@@ -26,7 +26,7 @@ namespace WinFormsApp1.UserC
         private void LoadCustomFont()
         {
             _fontCollection = new PrivateFontCollection();
-            string fontPath = Path.Combine(Application.StartupPath, "Fonts/SF-Pro", "SF-Pro-Display-Light.otf");
+            string fontPath = Path.Combine(Application.StartupPath, "Fonts/SF-Pro", "SFPRODISPLAYHEAVYITALIC.OTF");
             _fontCollection.AddFontFile(fontPath);
 
             // Define a fonte padrão para o formulário
@@ -37,7 +37,7 @@ namespace WinFormsApp1.UserC
         {
             foreach (Control control in parent.Controls)
             {
-                control.Font = new Font(_fontCollection.Families[0], 12);
+                control.Font = new Font(_fontCollection.Families[0], 23);
                 // Recursivamente aplique a todos os controles filhos
                 if (control.Controls.Count > 0)
                 {

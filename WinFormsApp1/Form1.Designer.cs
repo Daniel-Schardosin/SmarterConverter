@@ -73,7 +73,7 @@
             // 
             // guna2Panel1
             // 
-            guna2Panel1.BackColor = Color.FromArgb(237, 229, 218);
+            guna2Panel1.BackColor = Color.FromArgb(88, 197, 220);
             guna2Panel1.BorderColor = Color.FromArgb(241, 238, 244);
             guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
             guna2Panel1.Controls.Add(guna2Button7);
@@ -167,7 +167,7 @@
             guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button4.FillColor = Color.Transparent;
             guna2Button4.Font = new Font("Yu Gothic UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button4.ForeColor = Color.FromArgb(44, 53, 50);
+            guna2Button4.ForeColor = Color.White;
             guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
             guna2Button4.ImageAlign = HorizontalAlignment.Left;
             guna2Button4.Location = new Point(0, 74);
@@ -193,7 +193,7 @@
             // 
             // PainelContainer
             // 
-            PainelContainer.BackColor = Color.FromArgb(237, 229, 218);
+            PainelContainer.BackColor = Color.FromArgb(239, 235, 223);
             PainelContainer.BorderRadius = 5;
             PainelContainer.CustomizableEdges = customizableEdges5;
             PainelContainer.Location = new Point(188, 46);
@@ -236,7 +236,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.PapayaWhip;
+            BackColor = Color.FromArgb(239, 235, 223);
             ClientSize = new Size(939, 574);
             Controls.Add(guna2ControlBox2);
             Controls.Add(guna2ControlBox1);
