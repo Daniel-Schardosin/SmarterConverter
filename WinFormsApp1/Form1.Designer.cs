@@ -250,7 +250,7 @@
             MinimumSize = new Size(939, 574);
             Name = "SmartConverter";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "s";
             Load += SmartConverter_Load;
             Click += SmartConverter_Click;
             guna2Panel1.ResumeLayout(false);

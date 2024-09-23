@@ -14,6 +14,7 @@ using WinFormsApp1;
 using System.Diagnostics;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
+using System.Reflection.Metadata;
 
 namespace SmartConvert.UserC
 {
@@ -23,6 +24,7 @@ namespace SmartConvert.UserC
         String DiretorioEscolhido;
         String[] ArquivosPDF;
         Boolean Erro = false;
+        String PastaDesaida;
 
         public Conversorpdf()
         {
@@ -30,13 +32,14 @@ namespace SmartConvert.UserC
             LoadCustomFont();
             ApplyFontToControls2(this);
             this.guna2Button2.Visible = false;
+            
         }
 
 
         private void LoadCustomFont()
         {
             _fontCollection = new PrivateFontCollection();
-            string fontPath = System.IO.Path.Combine(Application.StartupPath, "Fonts/Pixel", "PixelifySans-Medium.ttf");
+            string fontPath = System.IO.Path.Combine(Application.StartupPath, "Fonts/SF-Pro", "SF-Pro-Display-BoldItalic.otf");
             _fontCollection.AddFontFile(fontPath);
 
             // Define a fonte padrão para o formulário
@@ -97,11 +100,20 @@ namespace SmartConvert.UserC
                 {
                     DiretorioEscolhido = DiretorioArquivos.SelectedPath;
                     guna2TextBox1.Text = DiretorioEscolhido;
-                    this.guna2Button2.Visible = true;
                     ArquivosPDF = Directory.GetFiles(DiretorioEscolhido, "*.pdf");
-
-
                     listBox1.Items.Clear();
+
+                    if (ArquivosPDF.Length > 0)
+                    {
+                        this.guna2Button2.Visible = true;
+                       
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhum arquivo no formato PDF foi encontrado!");
+                    }
+
+
 
                     foreach (string File in ArquivosPDF)
                     {
@@ -115,7 +127,8 @@ namespace SmartConvert.UserC
         private void guna2Button2_Click(object sender, EventArgs e)
 
         {
-            foreach( String pdfpath in ArquivosPDF)
+
+            foreach (String pdfpath in ArquivosPDF)
             {
 
                 try
@@ -123,14 +136,16 @@ namespace SmartConvert.UserC
                     String text = ExtrairTextoPDF(pdfpath);
 
 
-                    String PastadeSaida = System.IO.Path.Combine(DiretorioEscolhido,"Saída");
+                    String PastadeSaida = System.IO.Path.Combine(DiretorioEscolhido, "Saída");
 
-                    if (Directory.Exists(PastadeSaida)) {
-                        String NomeArquivo = System.IO.Path.GetFileNameWithoutExtension(pdfpath) + ".txt" ;
-                        NomeArquivo = NomeArquivo.ToLower();   
+                    if (Directory.Exists(PastadeSaida))
+                    {
+                        String NomeArquivo = System.IO.Path.GetFileNameWithoutExtension(pdfpath) + ".txt";
+                        NomeArquivo = NomeArquivo.ToLower();
                         String GravaSaida = System.IO.Path.Combine(PastadeSaida, NomeArquivo);
                         File.WriteAllText(GravaSaida, text);
-                        
+                        PastaDesaida = PastadeSaida;
+
 
                     }
                     else
@@ -140,21 +155,22 @@ namespace SmartConvert.UserC
                         NomeArquivo = NomeArquivo.ToLower();
                         String GravaSaida = System.IO.Path.Combine(PastadeSaida, NomeArquivo);
                         File.WriteAllText(GravaSaida, text);
+                        PastaDesaida = PastadeSaida;
                     }
 
-                    
-                }
-                catch (Exception ex) {
-                    MessageBox.Show($"Erro ao converter o arquivo {System.IO.Path.GetFileName(pdfpath)}:{ex.Message}");
-                     Erro = true;
-                }
-                if  (Erro == false)
-                {
-                    MessageBox.Show("Conversão concluída!");
-                    Process.Start("explorer.exe", DiretorioEscolhido);
 
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao converter o arquivo {System.IO.Path.GetFileName(pdfpath)}:{ex.Message}");
+                    Erro = true;
+                }
                 
+            }
+            if (Erro == false)
+            {
+               MessageBox.Show("Conversão concluída!");
+                Process.Start("explorer.exe", PastaDesaida);
 
             }
 
@@ -183,5 +199,12 @@ namespace SmartConvert.UserC
             }
 
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            SelecDirectory();
+        }
+
+       
     }
 }

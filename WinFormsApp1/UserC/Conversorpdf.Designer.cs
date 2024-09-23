@@ -30,49 +30,25 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2vSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             listBox1 = new ListBox();
             label1 = new Label();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // guna2Button1
-            // 
-            guna2Button1.BorderColor = Color.FromArgb(102, 83, 52);
-            guna2Button1.BorderRadius = 8;
-            guna2Button1.BorderThickness = 2;
-            guna2Button1.CustomBorderColor = Color.FromArgb(102, 83, 52);
-            guna2Button1.CustomBorderThickness = new Padding(3);
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Transparent;
-            guna2Button1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.FromArgb(102, 83, 52);
-            guna2Button1.Location = new Point(27, 205);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(207, 38);
-            guna2Button1.TabIndex = 0;
-            guna2Button1.Text = "Localizar Arquivos";
-            guna2Button1.Click += guna2Button1_Click;
-            // 
             // guna2TextBox1
             // 
-            guna2TextBox1.BorderRadius = 4;
-            guna2TextBox1.CustomizableEdges = customizableEdges3;
+            guna2TextBox1.BorderRadius = 2;
+            guna2TextBox1.CustomizableEdges = customizableEdges1;
             guna2TextBox1.DefaultText = "";
             guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -88,22 +64,21 @@
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderForeColor = Color.Black;
-            guna2TextBox1.PlaceholderText = "C:\\";
+            guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.ReadOnly = true;
             guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2TextBox1.Size = new Size(693, 29);
             guna2TextBox1.TabIndex = 1;
             // 
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.FromArgb(238, 234, 224);
+            guna2Panel1.Controls.Add(guna2Button3);
             guna2Panel1.Controls.Add(guna2Button2);
-            guna2Panel1.Controls.Add(guna2vSeparator1);
             guna2Panel1.Controls.Add(listBox1);
             guna2Panel1.Controls.Add(label1);
             guna2Panel1.Controls.Add(guna2TextBox1);
-            guna2Panel1.Controls.Add(guna2Button1);
             guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Dock = DockStyle.Bottom;
             guna2Panel1.Location = new Point(0, 0);
@@ -114,8 +89,28 @@
             guna2Panel1.TabIndex = 2;
             guna2Panel1.Paint += guna2Panel1_Paint;
             // 
+            // guna2Button3
+            // 
+            guna2Button3.BorderRadius = 5;
+            guna2Button3.CustomizableEdges = customizableEdges3;
+            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button3.FillColor = Color.FromArgb(0, 192, 0);
+            guna2Button3.Font = new Font("Segoe UI", 9F);
+            guna2Button3.ForeColor = Color.White;
+            guna2Button3.Location = new Point(27, 206);
+            guna2Button3.Name = "guna2Button3";
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button3.Size = new Size(180, 45);
+            guna2Button3.TabIndex = 6;
+            guna2Button3.Text = "Localizar";
+            guna2Button3.Click += guna2Button3_Click;
+            // 
             // guna2Button2
             // 
+            guna2Button2.BorderRadius = 5;
             guna2Button2.CustomizableEdges = customizableEdges5;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -124,21 +119,13 @@
             guna2Button2.FillColor = Color.FromArgb(0, 192, 0);
             guna2Button2.Font = new Font("Segoe UI", 9F);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(197, 429);
+            guna2Button2.Location = new Point(296, 455);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button2.Size = new Size(329, 45);
+            guna2Button2.Size = new Size(180, 45);
             guna2Button2.TabIndex = 5;
             guna2Button2.Text = "Converter";
             guna2Button2.Click += guna2Button2_Click;
-            // 
-            // guna2vSeparator1
-            // 
-            guna2vSeparator1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            guna2vSeparator1.Location = new Point(0, 0);
-            guna2vSeparator1.Name = "guna2vSeparator1";
-            guna2vSeparator1.Size = new Size(10, 525);
-            guna2vSeparator1.TabIndex = 4;
             // 
             // listBox1
             // 
@@ -148,7 +135,7 @@
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(27, 89);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(693, 90);
+            listBox1.Size = new Size(693, 75);
             listBox1.TabIndex = 3;
             // 
             // label1
@@ -176,13 +163,11 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Label label1;
         private ListBox listBox1;
-        private Guna.UI2.WinForms.Guna2VSeparator guna2vSeparator1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }
