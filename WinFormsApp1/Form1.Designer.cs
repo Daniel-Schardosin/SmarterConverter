@@ -52,8 +52,8 @@
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             PainelContainer = new Guna.UI2.WinForms.Guna2Panel();
@@ -77,8 +77,8 @@
             guna2Panel1.BorderColor = Color.FromArgb(241, 238, 244);
             guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
             guna2Panel1.Controls.Add(guna2Button7);
-            guna2Panel1.Controls.Add(guna2Button5);
             guna2Panel1.Controls.Add(guna2Button3);
+            guna2Panel1.Controls.Add(guna2Button5);
             guna2Panel1.Controls.Add(guna2Button4);
             guna2Panel1.CustomizableEdges = customizableEdges15;
             guna2Panel1.Dock = DockStyle.Left;
@@ -92,6 +92,7 @@
             // guna2Button7
             // 
             guna2Button7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2Button7.BackColor = Color.FromArgb(88, 197, 220);
             guna2Button7.CustomizableEdges = customizableEdges7;
             guna2Button7.DisabledState.BorderColor = Color.DarkGray;
             guna2Button7.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -99,21 +100,47 @@
             guna2Button7.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button7.FillColor = Color.Transparent;
             guna2Button7.Font = new Font("Yu Gothic UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button7.ForeColor = Color.FromArgb(44, 53, 50);
+            guna2Button7.ForeColor = Color.White;
             guna2Button7.Image = (Image)resources.GetObject("guna2Button7.Image");
             guna2Button7.ImageAlign = HorizontalAlignment.Left;
-            guna2Button7.Location = new Point(0, 148);
+            guna2Button7.Location = new Point(0, 177);
             guna2Button7.Name = "guna2Button7";
             guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button7.Size = new Size(188, 35);
+            guna2Button7.Size = new Size(188, 52);
             guna2Button7.TabIndex = 10;
             guna2Button7.Text = "Perfil";
             guna2Button7.TextAlign = HorizontalAlignment.Left;
             guna2Button7.Click += guna2Button7_Click_1;
             // 
+            // guna2Button3
+            // 
+            guna2Button3.BackColor = Color.FromArgb(88, 197, 220);
+            guna2Button3.CheckedState.ForeColor = Color.FromArgb(255, 192, 128);
+            guna2Button3.CustomizableEdges = customizableEdges9;
+            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button3.FillColor = Color.Transparent;
+            guna2Button3.FocusedColor = Color.Transparent;
+            guna2Button3.Font = new Font("Yu Gothic UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button3.ForeColor = Color.White;
+            guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
+            guna2Button3.ImageAlign = HorizontalAlignment.Left;
+            guna2Button3.ImageSize = new Size(21, 21);
+            guna2Button3.Location = new Point(0, 125);
+            guna2Button3.Name = "guna2Button3";
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Button3.Size = new Size(188, 52);
+            guna2Button3.TabIndex = 8;
+            guna2Button3.Text = "Convert";
+            guna2Button3.TextAlign = HorizontalAlignment.Left;
+            guna2Button3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
+            guna2Button3.Click += guna2Button3_Click_2;
+            // 
             // guna2Button5
             // 
-            guna2Button5.CustomizableEdges = customizableEdges9;
+            guna2Button5.CustomizableEdges = customizableEdges11;
             guna2Button5.DisabledState.BorderColor = Color.DarkGray;
             guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -126,40 +153,16 @@
             guna2Button5.ImageAlign = HorizontalAlignment.Left;
             guna2Button5.Location = new Point(0, 530);
             guna2Button5.Name = "guna2Button5";
-            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Button5.Size = new Size(188, 44);
             guna2Button5.TabIndex = 9;
             guna2Button5.Text = "Configurações";
             guna2Button5.TextAlign = HorizontalAlignment.Left;
             guna2Button5.Click += guna2Button5_Click;
             // 
-            // guna2Button3
-            // 
-            guna2Button3.CheckedState.ForeColor = Color.FromArgb(255, 192, 128);
-            guna2Button3.CustomizableEdges = customizableEdges11;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.Transparent;
-            guna2Button3.FocusedColor = Color.Transparent;
-            guna2Button3.Font = new Font("Yu Gothic UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button3.ForeColor = Color.FromArgb(44, 53, 50);
-            guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
-            guna2Button3.ImageAlign = HorizontalAlignment.Left;
-            guna2Button3.ImageSize = new Size(21, 21);
-            guna2Button3.Location = new Point(0, 110);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button3.Size = new Size(188, 32);
-            guna2Button3.TabIndex = 8;
-            guna2Button3.Text = "Convert";
-            guna2Button3.TextAlign = HorizontalAlignment.Left;
-            guna2Button3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
-            guna2Button3.Click += guna2Button3_Click_2;
-            // 
             // guna2Button4
             // 
+            guna2Button4.BackColor = Color.FromArgb(88, 197, 220);
             guna2Button4.CustomizableEdges = customizableEdges13;
             guna2Button4.DisabledState.BorderColor = Color.DarkGray;
             guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -170,10 +173,11 @@
             guna2Button4.ForeColor = Color.White;
             guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
             guna2Button4.ImageAlign = HorizontalAlignment.Left;
-            guna2Button4.Location = new Point(0, 74);
+            guna2Button4.ImageSize = new Size(30, 30);
+            guna2Button4.Location = new Point(0, 73);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Button4.Size = new Size(188, 30);
+            guna2Button4.Size = new Size(188, 52);
             guna2Button4.TabIndex = 0;
             guna2Button4.Text = " Home";
             guna2Button4.TextAlign = HorizontalAlignment.Left;

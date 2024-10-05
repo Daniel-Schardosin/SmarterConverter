@@ -91,6 +91,7 @@ namespace SmartConvert.UserC
         {
             using (FolderBrowserDialog DiretorioArquivos = new FolderBrowserDialog())
             {
+                
                 DiretorioArquivos.Description = "Selecione um diretório";
                 DiretorioArquivos.ShowNewFolderButton = true;
 
