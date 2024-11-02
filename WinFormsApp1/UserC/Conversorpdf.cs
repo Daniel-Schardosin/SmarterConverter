@@ -94,7 +94,7 @@ namespace SmartConvert.UserC
                         MessageBox.Show("Nenhum arquivo no formato PDF foi encontrado!");
                     }
 
-                   
+
                 }
             }
         }
@@ -218,6 +218,11 @@ namespace SmartConvert.UserC
                 }
             }
             return false;
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
