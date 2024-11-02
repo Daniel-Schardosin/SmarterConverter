@@ -87,7 +87,7 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(748, 525);
             guna2Panel1.TabIndex = 2;
-            guna2Panel1.Paint += guna2Panel1_Paint;
+            
             // 
             // guna2Button3
             // 
@@ -156,7 +156,7 @@
             Controls.Add(guna2Panel1);
             Name = "Conversorpdf";
             Size = new Size(748, 525);
-            Load += Conversorpdf_Load;
+            
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ResumeLayout(false);

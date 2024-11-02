@@ -15,16 +15,18 @@ using System.Diagnostics;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
 using System.Reflection.Metadata;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices;
 
 namespace SmartConvert.UserC
 {
     public partial class Conversorpdf : UserControl
     {
-
         String DiretorioEscolhido;
         String[] ArquivosPDF;
         Boolean Erro = false;
-        String PastaDesaida;
+        String PastaDeSaida;
+        Boolean validador = false;
 
         public Conversorpdf()
         {
@@ -32,9 +34,7 @@ namespace SmartConvert.UserC
             LoadCustomFont();
             ApplyFontToControls2(this);
             this.guna2Button2.Visible = false;
-            
         }
-
 
         private void LoadCustomFont()
         {
@@ -46,52 +46,29 @@ namespace SmartConvert.UserC
             this.Font = new Font(_fontCollection.Families[0], 15);
         }
 
-
         private void ApplyFontToControls2(Control parent)
         {
             foreach (Control control in parent.Controls)
             {
                 control.Font = new Font(_fontCollection.Families[0], 11);
-                // Recursivamente aplique a todos os controles filhos
                 if (control.Controls.Count > 0)
                 {
                     ApplyFontToControls2(control);
                 }
             }
-
         }
-
 
         private PrivateFontCollection _fontCollection;
-
-
-
-
-        private void Conversorpdf_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             SelecDirectory();
-
         }
+
         private void SelecDirectory()
         {
             using (FolderBrowserDialog DiretorioArquivos = new FolderBrowserDialog())
             {
-                
                 DiretorioArquivos.Description = "Selecione um diretório";
                 DiretorioArquivos.ShowNewFolderButton = true;
 
@@ -107,75 +84,68 @@ namespace SmartConvert.UserC
                     if (ArquivosPDF.Length > 0)
                     {
                         this.guna2Button2.Visible = true;
-                       
+                        foreach (string File in ArquivosPDF)
+                        {
+                            listBox1.Items.Add(System.IO.Path.GetFileName(File));
+                        }
                     }
                     else
                     {
                         MessageBox.Show("Nenhum arquivo no formato PDF foi encontrado!");
                     }
 
-
-
-                    foreach (string File in ArquivosPDF)
-                    {
-                        listBox1.Items.Add(System.IO.Path.GetFileName(File));
-                    }
+                   
                 }
             }
-
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
-
         {
-
-            foreach (String pdfpath in ArquivosPDF)
+            if (!validador)
             {
-
-                try
+                foreach (String pdfpath in ArquivosPDF)
                 {
-                    String text = ExtrairTextoPDF(pdfpath);
-
-
-                    String PastadeSaida = System.IO.Path.Combine(DiretorioEscolhido, "Saída");
-
-                    if (Directory.Exists(PastadeSaida))
+                    try
                     {
-                        String NomeArquivo = System.IO.Path.GetFileNameWithoutExtension(pdfpath) + ".txt";
-                        NomeArquivo = NomeArquivo.ToLower();
-                        String GravaSaida = System.IO.Path.Combine(PastadeSaida, NomeArquivo);
-                        File.WriteAllText(GravaSaida, text);
-                        PastaDesaida = PastadeSaida;
+                        String text = ExtrairTextoPDF(pdfpath);
 
+                        String pastaDeSaida = System.IO.Path.Combine(DiretorioEscolhido, "Saída");
+
+                        if (!Directory.Exists(pastaDeSaida))
+                        {
+                            Directory.CreateDirectory(pastaDeSaida);
+                        }
+
+                        String nomeArquivo = System.IO.Path.GetFileNameWithoutExtension(pdfpath) + ".txt";
+                        String gravaSaida = System.IO.Path.Combine(pastaDeSaida, nomeArquivo.ToLower());
+                        File.WriteAllText(gravaSaida, text);
+                        PastaDeSaida = pastaDeSaida;
 
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        Directory.CreateDirectory(PastadeSaida);
-                        String NomeArquivo = System.IO.Path.GetFileNameWithoutExtension(pdfpath) + ".txt";
-                        NomeArquivo = NomeArquivo.ToLower();
-                        String GravaSaida = System.IO.Path.Combine(PastadeSaida, NomeArquivo);
-                        File.WriteAllText(GravaSaida, text);
-                        PastaDesaida = PastadeSaida;
+                        MessageBox.Show($"Erro ao converter o arquivo {System.IO.Path.GetFileName(pdfpath)}: {ex.Message}");
+                        Erro = true;
                     }
-
-
                 }
-                catch (Exception ex)
+
+                if (!Erro)
                 {
-                    MessageBox.Show($"Erro ao converter o arquivo {System.IO.Path.GetFileName(pdfpath)}:{ex.Message}");
-                    Erro = true;
+                    validador = true;
+                    MessageBox.Show("Conversão concluída!");
+                    AbrirDiretorioSaida(PastaDeSaida);
                 }
-                
             }
-            if (Erro == false)
+            else
             {
-               MessageBox.Show("Conversão concluída!");
-                Process.Start("explorer.exe", PastaDesaida);
+                DialogResult result = MessageBox.Show("Está convertendo os mesmos arquivos. Deseja continuar?", "Confirmação",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
+                validador = result != DialogResult.Yes;
             }
-
         }
+
         private string ExtrairTextoPDF(string path)
         {
             try
@@ -198,14 +168,56 @@ namespace SmartConvert.UserC
             {
                 throw new Exception("Erro ao ler o arquivo PDF.", ex);
             }
-
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             SelecDirectory();
+            validador = false;
         }
 
-       
+        [DllImport("user32.dll")]
+        private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+        [DllImport("user32.dll")]
+        private static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        private void AbrirDiretorioSaida(string pastaDeSaida)
+        {
+            if (!IsExplorerOpenInDirectory(pastaDeSaida))
+            {
+                Process.Start("explorer.exe", pastaDeSaida);
+            }
+            else
+            {
+                var hwnd = FindWindow("CabinetWClass", System.IO.Path.GetFileName(pastaDeSaida));
+                if (hwnd != IntPtr.Zero)
+                {
+                    SetForegroundWindow(hwnd);
+                }
+            }
+        }
+
+        private bool IsExplorerOpenInDirectory(string path)
+        {
+            path = System.IO.Path.GetFullPath(path).TrimEnd(System.IO.Path.DirectorySeparatorChar).ToLowerInvariant();
+
+            foreach (var proc in Process.GetProcessesByName("explorer"))
+            {
+                try
+                {
+                    if (proc.MainModule.FileName.ToLowerInvariant() == "c:\\windows\\explorer.exe" &&
+                        proc.MainWindowTitle.ToLowerInvariant().Contains(System.IO.Path.GetFileName(path)))
+                    {
+                        return true;
+                    }
+                }
+                catch
+                {
+                    continue;
+                }
+            }
+            return false;
+        }
     }
 }

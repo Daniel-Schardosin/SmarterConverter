@@ -113,6 +113,7 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(745, 522);
             guna2Panel1.TabIndex = 7;
+            guna2Panel1.Paint += guna2Panel1_Paint;
             // 
             // Conversor
             // 
