@@ -103,6 +103,7 @@
             guna2Button7.ForeColor = Color.White;
             guna2Button7.Image = (Image)resources.GetObject("guna2Button7.Image");
             guna2Button7.ImageAlign = HorizontalAlignment.Left;
+            guna2Button7.ImageSize = new Size(23, 23);
             guna2Button7.Location = new Point(0, 177);
             guna2Button7.Name = "guna2Button7";
             guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -127,7 +128,7 @@
             guna2Button3.ForeColor = Color.White;
             guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
             guna2Button3.ImageAlign = HorizontalAlignment.Left;
-            guna2Button3.ImageSize = new Size(21, 21);
+            guna2Button3.ImageSize = new Size(23, 23);
             guna2Button3.Location = new Point(0, 125);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges10;

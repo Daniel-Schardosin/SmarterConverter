@@ -46,9 +46,9 @@
             label1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.Location = new Point(147, -8);
             label1.Name = "label1";
-            label1.Size = new Size(385, 37);
+            label1.Size = new Size(383, 37);
             label1.TabIndex = 2;
-            label1.Text = "Bem vindo ao studio converter";
+            label1.Text = "Bem vindo ao Smart converter";
             label1.Click += label1_Click;
             // 
             // pictureBox1
